@@ -22,18 +22,7 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        System.out.print('{');        
-
-        for ( int i = 0 ; i < allIndexOf("hello world", 'l').length ; i ++){
-           //  System.out.println( rozi = allIndexOf("hello world", 'l'));    
-           if( i != allIndexOf("hello world", 'l').length -1){
-                System.out.print(allIndexOf("hello world", 'l')[i] + ", ");
-        } else { 
-            System.out.print(allIndexOf("hello world", 'l')[i]); 
-        }
-           
-        }
-        System.out.println('}');        
+        System.out.print(camelCase("HELLO world"hi ));        
 
         }
        
@@ -80,7 +69,7 @@ public class StringOps {
         String res = "" ;  
         String str = "" ;
         
-        for(int j = 0 ; j < string.length() -1 ; j ++){
+        for(int j = 0 ; j < string.length()  ; j ++){
             if( (string.charAt(j) < 91) && ( string.charAt(j) > 64) ){
 
             res += (char)(string.charAt(j) +32) ; 
@@ -88,7 +77,7 @@ public class StringOps {
         }
 
         str += res.charAt(0) ; 
-        for(int i = 1 ; i < string.length() -1 ; i ++){            
+        for(int i = 1 ; i < string.length() ; i ++){            
             
             if( res.charAt(i) == 32){
                 i++ ; 
