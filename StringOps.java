@@ -54,7 +54,7 @@ public class StringOps {
                 continue;
 
             }
-           if (((string.charAt(i) != 'U') || (string.charAt(i) != 'A' )|| (string.charAt(i) != 'O') ||(string.charAt(i) != 'E' )||(string.charAt(i) != 'I') )&&((string.charAt(i) > 64) &&( string.charAt(i) < 91))){
+           if (((string.charAt(i) != 'U') && (string.charAt(i) != 'A' )&& (string.charAt(i) != 'O') && (string.charAt(i) != 'E' )&&(string.charAt(i) != 'I') )&&((string.charAt(i) > 64) &&( string.charAt(i) < 91))){
                 res += (char)(string.charAt(i) +32) ; 
             }
 
