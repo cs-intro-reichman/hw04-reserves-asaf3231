@@ -12,7 +12,7 @@ public class ArrayOps {
                 count ++ ; 
 
             }if(i == (array.length) -1 ){
-                return count ; 
+                return count; 
             }
                 
         }
