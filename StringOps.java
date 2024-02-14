@@ -90,7 +90,7 @@ public class StringOps {
             else {str += res.charAt(i);}
 
         } 
-        //    deletespaces (str) ; 
+          deletespaces (str) ; 
 
         return str ;
     }
