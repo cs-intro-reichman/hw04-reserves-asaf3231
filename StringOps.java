@@ -22,21 +22,124 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        
-    }
+        System.out.print('{');        
 
-    public static String capVowelsLowRest (String string) {
-        // Write your code here:
-        return "";
+        for ( int i = 0 ; i < allIndexOf("hello world", 'l').length ; i ++){
+           //  System.out.println( rozi = allIndexOf("hello world", 'l'));    
+           if( i != allIndexOf("hello world", 'l').length -1){
+                System.out.print(allIndexOf("hello world", 'l')[i] + ", ");
+        } else { 
+            System.out.print(allIndexOf("hello world", 'l')[i]); 
+        }
+           
+        }
+        System.out.println('}');        
+
+        }
+       
+    public static String capVowelsLowRest (String string){
+        String res = "" ;  
+
+        for(int i = 0 ; i < string.length(); i ++){
+
+            if( string.charAt(i) == 'i'){
+               res += 'I' ; 
+               continue;
+            }
+            if( string.charAt(i) == 'e'){
+                res += 'E' ; 
+                continue;
+
+            }
+            if( string.charAt(i) == 'o'){
+                res += 'O' ; 
+                continue;
+
+            }
+            if( string.charAt(i) == 'a'){
+                res += 'A' ; 
+                continue;
+
+            }
+            if( string.charAt(i) == 'u'){
+                res += 'U' ; 
+                continue;
+
+            }
+            else
+            
+            {res += string.charAt(i);}
+        }
+
+         return res;
     }
+        
+    
 
     public static String camelCase (String string) {
-        // Write your code here:
-        return "";
+        String res = "" ;  
+        String str = "" ;
+        
+        for(int j = 0 ; j < string.length() -1 ; j ++){
+            if( (string.charAt(j) < 91) && ( string.charAt(j) > 64) ){
+
+            res += (char)(string.charAt(j) +32) ; 
+        }else{ res += string.charAt(j) ; }
+        }
+
+        str += res.charAt(0) ; 
+        for(int i = 1 ; i < string.length() -1 ; i ++){            
+            
+            if( res.charAt(i) == 32){
+                i++ ; 
+                str += (char)(res.charAt(i) -32) ;
+                continue ; 
+            }
+            else {str += res.charAt(i);}
+
+        } 
+        //    deletespaces (str) ; 
+
+        return str ;
     }
 
     public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+        int i = 0  ; 
+
+        for ( int j = 0 ; j < string.length() ; j++){
+            if (string.charAt(j) == chr ){  
+                i++ ; 
+            }
+
+        }
+        
+
+        int[] times = new int[i] ; 
+        int s  = 0 ; 
+        for ( int k = 0 ; k < string.length() ; k++){
+            if (string.charAt(k) == chr ){  
+               times[s] = k ; 
+               s++ ;
+            }
+
+
+        }
+        return times;
     }
+
+    public static String deletespaces (String string) {
+        String without = "" ; 
+      for ( int i = 0 ; i < string.length() ; i ++ ){
+
+        if(string.charAt(i) != ' '){
+            without += string.charAt(i) ; 
+            continue ; 
+        }
+
+         
+
+        }
+        return without ; 
+    }
+
 }
